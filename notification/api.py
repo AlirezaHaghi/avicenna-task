@@ -17,7 +17,7 @@ def list_notifications(
     deliver_before: datetime | None = None,
 ):
     """List notifications, each with a single aggregated status (see CHALLENGE.md, Task 3)."""
-    return get_all_notifications(limit=limit, offset=offset)
+    return get_all_notifications(limit=limit, offset=offset, deliver_after=deliver_after, deliver_before=deliver_before)
 
 
 @router.post("/", response=IngestResponseOut)

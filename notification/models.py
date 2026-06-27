@@ -10,7 +10,6 @@ class Notification(models.Model):
         related_name="notifications",
     )
     deliver_at = models.DateTimeField(help_text="When this notification should be delivered")
-
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
