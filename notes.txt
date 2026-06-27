@@ -1,0 +1,11 @@
+douplicate event in notification is seen -> idempotency is required
+we must manage edge cases in notification
+
+i created the command
+i decided use abstract model because the events are seperable based on tracking number (first 2 chars)
+
+
+i saw the tracking number is generated somewhere else out of notification so  i had to create a map between id in tracking number
+---
+
+setup database and load the objects
