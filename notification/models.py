@@ -43,13 +43,19 @@ class AbstractChannel(models.Model):
         on_delete=models.CASCADE,
         related_name="%(class)ss",
     )
-    status_occurred_at = models.DateTimeField(
+    occurred_at = models.DateTimeField(
         null=True,
         blank=True,
+    )
+    received_at = models.DateTimeField(
+        null=True,
+        blank=True,
+        help_text="When the provider sent the webhook (for observability only)",
     )
 
     class Meta:
         abstract = True
+        # indexes = [models.Index(fields=["tracking_id", "occurred_at"], include=["status"])]
 
 
 class EmailChannel(AbstractChannel):

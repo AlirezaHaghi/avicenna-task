@@ -4,8 +4,12 @@ we must manage edge cases in notification
 i created the command
 i decided use abstract model because the events are seperable based on tracking number (first 2 chars)
 
+---
+technichal decision:
+برای هر notification به history همه event های قبلی نیاز داریم یا فقط اخری کافی هست؟
+با توجه به این که به اینکه در api گفته شده فقط خلاصه event ها از همه چنل ها خواسته شده بنظر فقط وضعیت نهایی کافی است
+بنابر این فقط وضعیت نهایی هر event رو نگه میداریم و از نگهداری تغییرات صرف نظر میکنیم تا پاسخگوی حجم زیاد درخواست ها باشیم
 
-i saw the tracking number is generated somewhere else out of notification so  i had to create a map between id in tracking number
 ---
 
 setup database and load the objects
